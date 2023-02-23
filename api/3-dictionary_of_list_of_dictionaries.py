@@ -11,8 +11,6 @@ if __name__ == "__main__":
         url = "https://jsonplaceholder.typicode.com/users/{}/todos".format(id)
         req = requests.get(url)
         return json.loads(req.text)
-
-
     link = "https://jsonplaceholder.typicode.com/users/"
     res = requests.get(link)
     users = json.loads(res.text)
