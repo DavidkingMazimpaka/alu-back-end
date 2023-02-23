@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-""" 
-Exporting to JSON
-"""
+""" Exporting data to JSON """
 
+import csv
 import json
-import sys
-
 import requests
+import sys
 
 if __name__ == "__main__":
     link = "https://jsonplaceholder.typicode.com/users/{}".format(sys.argv[1])
