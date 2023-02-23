@@ -4,8 +4,8 @@ This is the return TODO list
 """
 
 
-import requests
 import json
+import requests
 import sys
 if __name__ == "__main__":
     link = "https://jsonplaceholder.typicode.com/users/{}".format(sys.argv[1])
