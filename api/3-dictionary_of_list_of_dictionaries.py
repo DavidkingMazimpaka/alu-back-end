@@ -10,9 +10,9 @@ import requests
 import sys
 if __name__ == "__main__":
     def getTodos(id):
-        link = "https://jsonplaceholder.typicode.com/users/{}/todos".format(id)
-        res = requests.get(link)
-        return json.loads(res.text)
+        url_link = "https://jsonplaceholder.typicode.com/users/{}/todos".format(id)
+        request_link = requests.get(url_link)
+        return json.loads(request_link.text)
     link = "https://jsonplaceholder.typicode.com/users/"
     res = requests.get(link)
     users = json.loads(res.text)
@@ -23,6 +23,3 @@ if __name__ == "__main__":
                           "username": i["username"]} for j in todos]
     with open("todo_all_employees.json", 'w', encoding='utf-8') as f:
         f.write(json.dumps(data))
-        
-
-
