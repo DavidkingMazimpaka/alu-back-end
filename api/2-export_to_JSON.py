@@ -3,11 +3,11 @@
 Exporting to JSON
 """
 
-
-import csv
 import json
-import requests
 import sys
+
+import requests
+
 if __name__ == "__main__":
     link = "https://jsonplaceholder.typicode.com/users/{}".format(sys.argv[1])
     res = requests.get(link)
@@ -22,5 +22,3 @@ if __name__ == "__main__":
     json_data = json.dumps({"{}".format(user["id"]): data})
     with open("{}.json".format(user["id"]), 'w', encoding='utf-8') as f:
         f.write(json_data)
-        
-
