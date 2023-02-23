@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-""" 
-Dictionary with many dictionaries
-"""
-
+""" get data from csv """
 
 import csv
 import json
